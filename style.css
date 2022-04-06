@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    background-color: #ebebeb;
+     margin-right: 100px;
+     margin-left: 100px;
+    
+}
+/* header */
+.header-h1 {
+    font-size: 1.5em;
+  color: rgba(0, 0, 0, 0.384);
+
+}
+.cloud {
+    width: 120px;
+    margin-right: 20px;
+}
+header {
+     display: flex;
+     align-items: center;  
+       
+}
+/* nav */
+ul {
+    background-color: white;
+   height: 90px;
+   border-radius: 5px;
+   display: grid;
+   grid-template-columns: repeat(5, 0.1fr);
+   grid-gap: 10px;
+   box-shadow: 5px 5px #88888865;
+   padding: 10px;
+  
+}
+li {
+    display: flex;
+    align-items: center;
+    
+}
+li a {
+    text-decoration: none;
+    font-size: 1.3em;
+    color: rgba(0, 0, 0, 0.589); 
+    position: relative;
+    overflow: hidden;
+     
+}
+/* nav hover */
+nav a::before {
+    position: absolute;
+    content: "";
+    left: -52%;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0, 183, 255);
+    opacity: 0;
+   transition: transform 0.5s;
+  
+   
+}
+nav a:hover::before {
+    transform: translate(155%);
+    opacity: 1;
+}
+nav a::after {
+    position: absolute;
+    content: "";
+    left: 55%;
+    bottom: 0;
+    height: 8%;
+    width: 100%;
+    background-color: rgb(0, 183, 255);
+    opacity: 0;
+   transition: transform 0.5s;
+}
+nav a:hover::after {
+    transform: translate(-55%);
+    opacity: 1;
+}
+nav a:hover {
+    color: rgb(0, 183, 255);
+}
+/* main */
+
+article {
+    background-color: white;
+   border-radius: 5px;
+   color: rgba(0, 0, 0, 0.589);
+   box-shadow: 10px 10px 5px 5px #88888865;
+}
+.login p {
+    margin: 50px;
+    
+}
+.content-inside1  {
+    margin: 50px;
+}
+.content h1 {
+    margin-bottom: 50px;
+    font-size: 3em;
+}
+.help h1 {
+  text-align: center;
+     margin-top: 100px;
+}
+
+/* grid struktura */
+main {
+    display: grid;
+    grid-template-areas: 
+    "nav nav nav nav "
+    "login content content content"
+     "login content content content "
+     "help content content content "
+     "help content content content "
+     
+    ;
+    grid-auto-rows: 150px;
+    grid-gap: 20px;
+}
+   
+
+
+main .grid {
+    grid-area: nav;
+   
+    
+}
+main .login {
+    grid-area: login;
+     
+}
+
+main .content {
+    grid-area: content;
+   
+}
+main .help {
+    grid-area: help;
+    
+   
+}
+/* footer */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    color: rgba(0, 0, 0, 0.589);
+    text-transform: capitalize;
+}
+/* media */
+@media (max-width:780px){
+    main {
+        display: grid;
+        grid-template-areas: 
+        "nav nav nav nav "
+        "nav nav nav nav "
+        "login login login login"
+         "content content content content "
+         "content content content content "
+         "content content content content "
+         "help 0 0 0 " ;
+        grid-auto-rows: 230px;
+        grid-gap: 20px;
+        
+    }
+    body {
+        margin:0 ;
+    }
+    header {
+        display: flex;
+        align-items: center; 
+        justify-content: center; 
+          
+   }
+   ul {
+    background-color: white;
+     display: flex !important;
+     flex-direction: column;
+     align-items: center;
+   border-radius: 5px;
+   box-shadow: 10px 10px 5px 5px #88888865;
+   padding: 10px;
+   height: 460px;
+   text-decoration: underline;
+ 
+  
+}
+li {
+    border-bottom: 1px solid rgba(0, 0, 255, 0.103);
+    width: 100%;
+     padding: 15px;
+      margin: 15px;
+  
+}
+li  a {
+    color: blue;
+
+    
+}
+li:hover {
+    background-color: rgba(0, 0, 255, 0.151);
+  
+}
+}
