@@ -161,16 +161,16 @@ footer {
         "nav nav nav nav "
         "login login login login"
          "content content content content "
-         "content content content content "
-         "content content content content "
-         "help 0 0 0 " ;
+         "content content content content ";
         grid-auto-rows: 230px;
         grid-gap: 20px;
         
     }
     body {
-        margin:0 ;
+       margin:0;
+       
     }
+
     header {
         display: flex;
         align-items: center; 
@@ -198,7 +198,7 @@ li {
   
 }
 li  a {
-    color: blue;
+    color: skyblue;
 
     
 }
